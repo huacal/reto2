@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletas 4-20 | Reto 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="introduction-web-site">
+            <h1>Bienvenidos a Bicicletas 4-20</h1>
+            <div class="nav-menu-main">
+                <nav clas="main-nav">
+                    <a href="index.html">Bicicleta</a>
+                    <a href="clients.html">Clientes</a>
+                    <a href="message.html">Mensajes</a>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
+            <h1> Bicicletas</h1>
+            <div class="box-card">
+                <div class="agregar-bicicleta">
+                    <div class="title-box">
+                        <h2>Creación y Detalles de Bicicletas</h2>
+                        <p><strong>Agrege:</strong> ID, Marca, Modelo, ID Categoria y Nombre</p>
+                    </div>
+                    <div class="agregar-producto">
+                        <input type="number" id="myId" placeholder="ID">
+                        <input type="text" id="brand" placeholder="Marca">
+                        <input type="number" id="model" placeholder="Modelo">
+                        <input type="number" id="category" placeholder="Categoria">
+                        <input type="text" id="name" placeholder="Nombre de producto">
+                        <button onclick="insertarBicicleta()">Crear Bicicleta</button>
+                        <button onclick="actualizarBicicleta()">Actualizar Bicicleta</button>
+                    </div>
+                </div>
+                <div class="inventario-bicicleta">
+                    <div class="captura-datos" id="capturaDatos">
+                        <div class="title-box">
+                            <h2>Visualización Bicicletas</h2>
+                            <p>Inventario Disponible de Bicicletas</p>
+                        </div>
+                        <button onclick="consultarBicicleta()" id="btnConsultaBicicletas">Mostrar Bicicletas</button>
+
+                    </div>
+
+                    <div class="box-elements-bicicletas" id="boxElementsBicicletas">
+                        <table>
+                            <thead>
+                                <!-- <td>ID</td> -->
+                                <td>Brand</td>
+                                <td>Model</td>
+                                <td>Category</td>
+                                <td>Name</td>
+                            </thead>
+                            <tbody id="ConsultaBicicletas">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <h1>Clientes</h1>
+            <div class="box-card">
+                <div class="agregar-cliente">
+                    <div class="title-box">
+                        <h2>Registro y Actualización Clientes</h2>
+                        <p><strong>Agrege:</strong> ID, Nombre, Correo eléctronico, Nombre</p>
+                    </div>
+                    <div class="agregar-actualizar-cliente">
+                        <input type="number" id="idClient" placeholder="ID">
+                        <input type="text" id="nameClient" placeholder="Nombres">
+                        <input type="email" id="emailClient" placeholder="Correo Eléctronico">
+                        <input type="number" id="ageClient" placeholder="Edad">
+                        <button onclick="insertarCliente()">Crear Cliente</button>
+                        <button onclick="actualizarCliente()">Actualizar Cliente</button>
+                    </div>
+                </div>
+
+                <div class="registros-clientes">
+                    <div class="captura-datos" id="capturaDatos">
+                        <div class="title-box">
+                            <h2>Clientes Registrados</h2>
+                            <p>Registro de Clientes Registrados.</p>
+                        </div>
+                        <button onclick="consultarCliente()" id="btnConsultaClientes">Consultar Clientes</button>
+                    </div>
+                    <div class="box-elements-clientes" id="boxElementsClientes">
+                        <table>
+                            <thead>
+                                <!-- <td>ID</td> -->
+                                <td>Nombre</td>
+                                <td>Email</td>
+                                <td>Edad</td>
+                            </thead>
+                            <tbody id="consultaClientes">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <h1>Mensajes</h1>
+            <div class="box-card message">
+
+                <div class="title-box">
+                    <h1>Quieres saber mas de Nosotros</h1>
+                    <p>Dejanos un mensaje y nos comunicaremos contigo...</p>
+                </div>
+
+                <div class="form-message">
+                    <input type="number" id="idMessage" placeholder="ID Mensaje">
+                    <textarea name="message-text" id="messageText" cols="130" rows="13" placeholder="Que buenas Bicicletas..."></textarea>
+                    <div class="buttons-message">
+                        <button onclick="insertarMensaje()">Enviar mensaje</button>
+                        <button onclick="actualizarMessage()">Actualizar mensaje</button>
+                        <button onclick="consultarMensajes()" id="btnConsultaMensajes">Ver Mensajes guardados</button>
+                    </div>
+                </div>
+                <div class="box-elements-mensajes" id="boxElementsMensajes">
+                    <table>
+                        <thead>
+                            <td>Mensaje</td>
+                        </thead>
+                        <tbody id="consultaMensajes">
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
